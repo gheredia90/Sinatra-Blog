@@ -1,0 +1,9 @@
+
+<h1>Welcome to the Sinatra Blog</h1>
+	<ul>
+		<% @posts.each do |post| %>
+			<% path = "/post_details/" + post.id.to_s %>
+  			<li><a href=<%=path%>><%= post.title %></a></li>
+		<% end %>
+	</ul>
+

@@ -1,0 +1,21 @@
+<html>
+ <head>
+ 	<meta charset="utf-8">
+ 	<title>Sinatra Blog</title>
+ </head>
+ <body>
+
+ <ul>
+	 <li><a href="/posts">Posts List</a></li>
+	 <li><a href="/new_post">New Post</a></li>	
+	 <% if session[:user] == nil %>	 
+	 	<li><a href="/login">Login</a></li>
+	 <% else %>	
+	 	<li><a href="/logout">Logout</a></li>
+	<% end %>	
+ </ul>
+
+ <%= yield %>
+
+ </body>
+</html>	
